@@ -1,16 +1,15 @@
-# firebase_authen
+### การสมัครสมาชิก (sign_up.dart)
+ในการสร้างแอคเคาท์ใหม่, ผู้ใช้ต้องกรอกอีเมลและรหัสผ่าน ซึ่งจะใช้คำสั่ง createUserWithEmailAndPassword
+คำสั่งนี้จะใช้สำหรับการสร้างผู้ใช้ใหม่โดยการส่งอีเมลและรหัสผ่านที่ผู้ใช้กรอกเข้าไป เมื่อทำสำเร็จจะมีการแจ้งเตือนผู้ใช้และกลับไปที่หน้าล็อกอิน
 
-A new Flutter project.
+### การเข้าสู่ระบบ (sign_in.dart หรือ auth.dart)
+ในการเข้าสู่ระบบ, ผู้ใช้กรอกอีเมลและรหัสผ่านเพื่อทำการตรวจสอบและเข้าสู่ระบบโดยใช้คำสั่ง signInWithEmailAndPassword
+คำสั่งนี้จะใช้สำหรับการตรวจสอบอีเมลและรหัสผ่านที่ผู้ใช้กรอก เมื่อเข้าสู่ระบบสำเร็จจะเปลี่ยนไปที่หน้า HomeScreen
 
-## Getting Started
+### การรีเซ็ตรหัสผ่าน (forgot_password.dart)
+หากผู้ใช้ลืมรหัสผ่าน, พวกเขาสามารถกรอกอีเมลและขอรับลิงก์รีเซ็ตรหัสผ่านผ่านคำสั่ง sendPasswordResetEmail
+คำสั่งนี้จะส่งลิงก์รีเซ็ตรหัสผ่านไปยังอีเมลที่ผู้ใช้กรอก ซึ่งจะทำให้ผู้ใช้สามารถตั้งรหัสผ่านใหม่ได้
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### การออกจากระบบ (logout)
+ในหน้า HomeScreen, ผู้ใช้สามารถออกจากระบบได้โดยการเรียกคำสั่ง signOut ของ Firebase
+signOut: คำสั่งนี้จะทำการออกจากระบบ และเปลี่ยนไปยังหน้า LoginScreen
